@@ -1,0 +1,51 @@
+﻿{
+  "configurations": [
+    {
+      "name": "x64-Debug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "inheritEnvironments": [ "msvc_x64_x64" ],
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "-v",
+      "ctestCommandArgs": "",
+      "variables": [
+        {
+          "name": "CMAKE_CXX_FLAGS_DEBUG",
+          "value": "/MDd /Zi /Ob0 /Od /RTC1 /FS /W4",
+          "type": "STRING"
+        },
+        {
+          "name": "CMAKE_CXX_FLAGS",
+          "value": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc",
+          "type": "STRING"
+        }
+      ],
+      "intelliSenseMode": "windows-msvc-x64"
+    },
+    {
+      "name": "x64-Release",
+      "generator": "Ninja",
+      "configurationType": "RelWithDebInfo",
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "-v",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [ "msvc_x64_x64" ],
+      "variables": [
+        {
+          "name": "CMAKE_CXX_FLAGS_DEBUG",
+          "value": "/MD /Zi /Ob0 /O2 /RTC1 /FS /W4",
+          "type": "STRING"
+        },
+        {
+          "name": "CMAKE_CXX_FLAGS",
+          "value": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc",
+          "type": "STRING"
+        }
+      ]
+    }
+  ]
+}
